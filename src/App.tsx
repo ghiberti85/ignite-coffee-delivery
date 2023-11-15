@@ -12,7 +12,6 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
         <Router />
-        <h1>Hello Coffee Delivery</h1>
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
