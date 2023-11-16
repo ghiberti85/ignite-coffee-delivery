@@ -1,4 +1,4 @@
-import { HomeContainer, HomeContent, Icon, IconsList, Subtitle, Title } from './styles'
+import { HomeContainer, HomeContent, Subtitle, Title, Features, FeatureContainer, IconContainer } from './styles'
 import bannerCoffee from '../../assets/banner-img.png'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react';
 
@@ -12,12 +12,32 @@ export function Home() {
                 <Subtitle>
                     Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora
                 </Subtitle>
-                <IconsList>
-                    <Icon><ShoppingCart size={24} weight="fill" />Compra simples e segura</Icon>
-                    <Icon><Package size={24} weight="fill" />Embalagem mantém o café intacto</Icon>
-                    <Icon><Timer size={24} weight="fill" />Entrega rápida e rastreada</Icon>
-                    <Icon><Coffee size={24} weight="fill" />O café chega fresquinho até você</Icon>
-                </IconsList>
+                <Features>
+                    <FeatureContainer>
+                        <IconContainer variant="yellow-dark">
+                            <ShoppingCart size={24} weight="fill" color="#fff" />
+                        </IconContainer>
+                        Compra simples e segura
+                    </FeatureContainer>
+                    <FeatureContainer>
+                        <IconContainer>
+                            <Package size={24} weight="fill" color="#fff" />
+                        </IconContainer>
+                        Embalagem mantém o café intacto
+                    </FeatureContainer>
+                    <FeatureContainer>
+                        <IconContainer variant="yellow">
+                            <Timer size={24} weight="fill" color="#fff" />
+                        </IconContainer>
+                        Entrega rápida e rastreada
+                    </FeatureContainer>
+                    <FeatureContainer>
+                        <IconContainer variant="purple">
+                            <Coffee size={24} weight="fill" color="#fff" />
+                        </IconContainer>
+                        O café chega fresquinho até você
+                    </FeatureContainer>
+                </Features>
             </HomeContent>
             <img src={bannerCoffee} alt="" />
         </HomeContainer>

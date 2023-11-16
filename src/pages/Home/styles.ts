@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HomeContainer = styled.div`
     width: 90rem;
-    padding: 2rem 10rem;
+    padding: 5.75rem 10rem;
     flex-shrink: 0;
     display: flex;
     justify-content: space-between;
@@ -42,7 +42,7 @@ export const Subtitle = styled.p`
     margin-bottom: 4.125rem;
 `;
 
-export const IconsList = styled.div`
+export const Features = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -50,7 +50,7 @@ export const IconsList = styled.div`
     grid-row-gap: 2.25rem;
 `;
 
-export const Icon = styled.p`
+export const FeatureContainer = styled.p`
     color: ${props=> props.theme['base-text']};
     font: 400 1rem Roboto, sans-serif;
     font-style: normal;
@@ -59,4 +59,29 @@ export const Icon = styled.p`
     justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
+`;
+
+interface IconContainerProps {
+    variant?: 'yellow-dark' | 'yellow' | 'purple' | 'base-text'
+}
+
+export const IconContainer = styled.div<IconContainerProps>`
+    background: ${props => props.theme['base-text']};
+    border-radius: 999px;
+
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    ${props => props.variant === 'yellow-dark' && css`
+        background:${props.theme['yellow-dark']};
+    `}
+    ${props => props.variant === 'yellow' && css`
+        background:${props.theme['yellow']};
+    `}
+    ${props => props.variant === 'purple' && css`
+        background:${props.theme['purple']};
+    `}
 `;
