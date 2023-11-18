@@ -88,22 +88,16 @@ export const Quantity = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
 
     padding: 0.75rem 0.5rem;
     border-radius: 6px;
     border: 0;
-
     background-color: ${(props) => props.theme['base-button']};
-`;
 
-
-export const Input = styled.input`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background: transparent;
-    border: 0;
-    width: 0.6rem;
+    input {
+        width: 2.4rem;
+        border: 0;
+        background-color: transparent;
+        text-align: right;
+    }
 `;
