@@ -6,7 +6,7 @@ export function CoffeeList() {
     return (
         <CoffeeListContainer>
             <h2>Nossos cafés</h2>
-            <CoffeeCard />
+            <CoffeeCard coffeeId={1} />
         </CoffeeListContainer>
     )
 }

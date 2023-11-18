@@ -96,3 +96,14 @@ export const Quantity = styled.div`
 
     background-color: ${(props) => props.theme['base-button']};
 `;
+
+
+export const Input = styled.input`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 0;
+    width: 0.6rem;
+`;
