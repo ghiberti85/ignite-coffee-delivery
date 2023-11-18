@@ -15,7 +15,7 @@ export const CardContainer = styled.div`
         width: 120px;
         height: 120px;
         flex-shrink: 0;
-        margin: auto;
+        margin: -1.5rem auto 0;
     }
 `;
 
@@ -54,14 +54,45 @@ export const Description = styled.p`
 
 export const Form = styled.form`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem 1.25rem;
+    gap: 1.5rem;
 
     span {
         font: 400 0.875rem Roboto, sans-serif;
     }
     strong {
         font: 800 1.5rem 'Baloo 2', sans-serif;
+        margin-left: 0.25rem;
     }
+
+    button {
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background: ${props => props.theme['purple-dark']};
+        border: 0;
+
+    }
+`;
+
+export const ShopInputs = styled.div`
+    display: flex;
+    gap: 0.5rem;
+`;
+
+export const Quantity = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 0.5rem;
+    border-radius: 6px;
+    border: 0;
+
+    background-color: ${(props) => props.theme['base-button']};
 `;

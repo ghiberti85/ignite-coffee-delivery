@@ -1,5 +1,5 @@
-import { ShoppingCart } from "phosphor-react";
-import { CardContainer, Description, Form, Tag, Title } from "./styles";
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { CardContainer, Description, Form, Quantity, ShopInputs, Tag, Title } from "./styles";
 
 export function CoffeeCard() {
     return (
@@ -10,12 +10,14 @@ export function CoffeeCard() {
             <Description>O tradicional café feito com água quente e grãos moídos</Description>
             <Form>
                 <span>R$<strong>9,90</strong></span>
-                <div>
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-                <button><ShoppingCart size={24} weight="fill" /></button>
+                <ShopInputs>
+                    <Quantity>
+                        <Minus size={14} color="purple"/>
+                        <span>1</span>
+                        <Plus size={14} color="purple" />
+                    </Quantity>
+                    <button><ShoppingCart size={24} weight="fill" color="#fff" /></button>
+                </ShopInputs>
             </Form>
         </CardContainer>
     )
