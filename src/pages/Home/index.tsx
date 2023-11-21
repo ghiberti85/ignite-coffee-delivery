@@ -2,7 +2,7 @@ import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 import bannerImg from '../../assets/banner-img.svg'
 
-// import { Card } from '../../components/Card'
+import { Card } from '../../components/Card'
 // import { coffees } from '../../../data.json'
 
 import { CoffeeList, Heading, Hero, HeroContent, Info } from './styles'
@@ -80,6 +80,7 @@ export function Home() {
           {/* {coffees.map((coffee) => (
             <Card key={coffee.id} coffee={coffee} />
           ))} */}
+          <Card />
         </div>
       </CoffeeList>
     </div>
