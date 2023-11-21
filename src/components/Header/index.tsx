@@ -1,6 +1,6 @@
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { Link } from 'react-router-dom'
-import logoSvg from '../../assets/logo-coffee-delivery.svg'
+import logoSvg from '../../../public/logo-coffee-delivery.svg'
 
 
 import { Aside, Container } from './styles'

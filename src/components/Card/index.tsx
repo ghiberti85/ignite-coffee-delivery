@@ -1,34 +1,63 @@
 import { ShoppingCart } from "phosphor-react";
 
-import coffeeImg from '../../assets/coffee/tradicional.png';
-
 import { CardContainer, CoffeeImg, Description, InfoBuy, Order, Price, Tag, Title } from "./styles";
 import { useTheme } from "styled-components";
 import { QuantityInput } from "../QuantityInput";
+import { useState } from "react";
 
-export function Card() {
+type CoffeeProps = {
+    coffee: {
+        id: string
+        title: string
+        description: string
+        tags: string[]
+        price: number
+        image: string
+    }
+}
+
+export function Card({ coffee }: CoffeeProps) {
     const theme = useTheme();
+    const [ quantity, setQuantity] = useState(0);
+
+    function addQuantity() {
+        setQuantity(state => state + 1)
+    }
+
+    function removeQuantity() {
+        if( quantity > 0) {
+            setQuantity(state => state - 1)
+        }
+    }
+
+
     return(
         <CardContainer>
-            <CoffeeImg src={coffeeImg} />
+            <CoffeeImg src={coffee.image} alt={coffee.title}/>
 
             <Tag>
-                <span>Tradicional</span>
+                {coffee.tags.map(tag => (
+                    <span key={tag}>{ tag }</span>
+                ))}
             </Tag>
 
-            <Title>Expresso Tradicional</Title>
+            <Title>{coffee.title}</Title>
             <Description>
-                O tradicional café feito com água quente e grãos moídos
+                {coffee.description}
             </Description>
             
             <InfoBuy>
                 <Price>
                     <span>R$</span>
-                    <span>9,90</span>
+                    <span>{coffee.price.toFixed(2)}</span>
                 </Price>
 
                 <Order>
-                    <QuantityInput />
+                    <QuantityInput
+                        quantity={quantity}
+                        addQuantity={addQuantity}
+                        removeQuantity={removeQuantity}
+                    />
                     <button>
                         <ShoppingCart size={22} weight="fill" color={theme.colors['base-card']}/>
                     </button>
