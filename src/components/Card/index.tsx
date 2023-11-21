@@ -4,6 +4,7 @@ import coffeeImg from '../../assets/coffee/tradicional.png';
 
 import { CardContainer, CoffeeImg, Description, InfoBuy, Order, Price, Tag, Title } from "./styles";
 import { useTheme } from "styled-components";
+import { QuantityInput } from "../QuantityInput";
 
 export function Card() {
     const theme = useTheme();
@@ -27,7 +28,7 @@ export function Card() {
                 </Price>
 
                 <Order>
-                    {/* <QuantityInput /> */}
+                    <QuantityInput />
                     <button>
                         <ShoppingCart size={22} weight="fill" color={theme.colors['base-card']}/>
                     </button>

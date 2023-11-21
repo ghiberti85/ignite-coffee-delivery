@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { mixins } from './mixins';
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -8,13 +9,13 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: ${props => props.theme['background']};
-        color: ${props => props.theme['base-text']};
+        background: ${(props) => props.theme.colors.background};
+        color: ${(props) => props.theme.colors['base-text']};
         -webkit-font-smoothing: antialiased;
     }
 
     body, input, text-area, button {
-        font: 400 1rem Roboto, sans-serif;
+        ${mixins.fonts.textM}
     }
 
     button {
