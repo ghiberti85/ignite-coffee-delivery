@@ -1,18 +1,28 @@
-import { HeaderContainer, HeaderContent, LocationText, ShoppingIcon } from './styles'
-import { MapPin, ShoppingCart } from "phosphor-react";
-import logoCoffee from '../../assets/logo-coffee-delivery.svg'
+import { MapPin, ShoppingCart } from 'phosphor-react'
+import { Link } from 'react-router-dom'
+import logoSvg from '../../assets/logo-coffee-delivery.svg'
 
+
+import { Aside, Container } from './styles'
 
 export function Header() {
-    return(
-        <HeaderContainer>
-            <img src={logoCoffee} alt="" />
-            <HeaderContent>
-                <LocationText><MapPin size={24} weight="fill"/> Vinhedo, SP</LocationText>
-                <ShoppingIcon><ShoppingCart size={24} weight="fill" /></ShoppingIcon>
-            </HeaderContent>
-            
 
-        </HeaderContainer>
-    )
+  return (
+    <Container>
+      <Link to="/">
+        <img src={logoSvg} alt="Coffee Delivery" />
+      </Link>
+
+      <Aside>
+        <div>
+          <MapPin size={22} weight="fill" />
+          <span>Porto Alegre, RS</span>
+        </div>
+
+        <Link to={`cart`} >
+          <ShoppingCart size={22} weight="fill" />
+        </Link>
+      </Aside>
+    </Container>
+  )
 }

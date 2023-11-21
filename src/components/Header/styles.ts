@@ -1,36 +1,72 @@
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 
-export const HeaderContainer = styled.header`
+import { mixins } from '../../styles/mixins'
+
+export const Container = styled.header`
+  max-width: 1160px;
+  padding: 32px 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const Aside = styled.aside`
+  display: flex;
+  gap: 12px;
+
+  div {
     display: flex;
-    padding: 2rem 10rem;
-    justify-content: space-between;
     align-items: center;
-    width: 90rem;
-`;
+    gap: 4px;
 
-export const HeaderContent = styled.div`
-    display:flex;
+    background-color: ${({ theme }) => theme.colors['purple-light']};
+
+    svg {
+      color: ${({ theme }) => theme.colors.purple};
+    }
+
+    span {
+      color: ${({ theme }) => theme.colors['purple-dark']};
+    }
+
+    padding: 10px 8px;
+    border-radius: 6px;
+  }
+
+  a {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-`;
 
-export const LocationText = styled.p`
-    background: ${props => props.theme['purple-light']};
-    color: ${props => props.theme['purple-dark']};
+    background-color: ${({ theme }) => theme.colors['yellow-light']};
+    color: ${({ theme }) => theme.colors['yellow-dark']};
+
+    padding: 8px;
     border-radius: 6px;
 
-    display: flex;
-    padding: 0.75rem;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;    
-`;
+    position: relative;
 
-export const ShoppingIcon = styled.div`
-    background: ${props => props.theme['yellow-light']};
-    color: ${props => props.theme['yellow-dark']};
-    padding: 0.60rem;
-    border-radius: 6px;
-    cursor: pointer;
-`;
+    &[aria-disabled='true'] {
+      pointer-events: none;
+    }
+
+    span {
+      ${mixins.fonts.textS};
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.white};
+      background-color: ${({ theme }) => theme.colors['yellow-dark']};
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      transform: translate(50%, -50%);
+    }
+  }
+`
