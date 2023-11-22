@@ -1,6 +1,6 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { useTheme } from 'styled-components'
-import bannerImg from '../../../public/banner-img.svg'
+import bannerImg from '../../assets/banner-img.svg'
 
 import { Card } from '../../components/Card'
 import { coffees } from '../../../data.json'
