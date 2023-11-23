@@ -204,7 +204,7 @@ export function Cart() {
                 
                 <TotalPurchaseContainer>
                     {coffeesInCart.map((coffee) => (
-                        <Fragment>
+                        <Fragment key={coffee.id}>
                             <Coffee>
                                 <div>
                                     <img src={coffee.image} alt={coffee.title} />

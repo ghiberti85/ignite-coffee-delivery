@@ -141,6 +141,10 @@ export const CoffeeInfo = styled.div`
         }
 
         svg {
+            color: ${({ theme }) => theme.colors.purple};
+        }
+
+        span {
             color: ${({ theme }) => theme.colors['base-text']};
             ${mixins.fonts.buttonM};
             text-transform: uppercase;

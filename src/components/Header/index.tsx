@@ -4,8 +4,10 @@ import logoSvg from '../../assets/logo-coffee-delivery.svg'
 
 
 import { Aside, Container } from './styles'
+import { useCart } from '../../hooks/useCart'
 
 export function Header() {
+  const { cart } = useCart()
 
   return (
     <Container>
@@ -21,7 +23,7 @@ export function Header() {
 
         <Link to={`cart`} >
           <ShoppingCart size={22} weight="fill" />
-         
+          {cart.length > 0 ? <span>{cart.length}</span> : null}
         </Link>
       </Aside>
     </Container>
