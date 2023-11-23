@@ -75,22 +75,22 @@ export const Price = styled.div`
         font-weight: bold;
     }
 `
-export const Order = styled.div<{ $itemAdded?: boolean}>`
+export const Order = styled.div<{ $itemAdded?: boolean }>`
     display: flex;
     align-items: center;
     gap: 8px;
 
-    button {
-        display: flex;
-        padding: 8px;
-        border-radius: 6px;
+    > button {
         background-color: ${({ theme, $itemAdded }) =>
             $itemAdded ? theme.colors['yellow-dark'] : theme.colors['purple-dark']};
         transition: background-color 0.2s;
-
+        display: flex;
+        padding: 8px;
+        border-radius: 6px;
+        
         &:hover {
             background-color: ${({ theme, $itemAdded }) =>
-                $itemAdded ? theme.colors.yellow : theme.colors.purple};
+                $itemAdded ? theme.colors['yellow'] : theme.colors['purple']};
         }
     }
 `

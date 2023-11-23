@@ -171,30 +171,32 @@ export function Cart() {
                             </div>
                         </PaymentHeading>
                         <PaymentOptions>
-                            <Radio
-                                isSelected={selectedPaymentMethod === 'credit'}
-                                {...register('paymentMethod')}
-                                value="credit"
-                            >
-                                <CreditCard size={16} />
-                                <span>Cartão de Crédito</span>
-                            </Radio>
-                            <Radio
-                                isSelected={selectedPaymentMethod === 'debit'}
-                                {...register('paymentMethod')}
-                                value="debit"                        
-                            >
-                                <Bank size={16} />
-                                <span>Cartão de Débito</span>
-                            </Radio>
-                            <Radio
-                                isSelected={selectedPaymentMethod === 'cash'}
-                                {...register('paymentMethod')}
-                                value="cash"            
-                            >
-                                <Money size={16} />
-                                <span>Dinheiro</span>
-                            </Radio>
+                            <div>
+                                <Radio
+                                    isSelected={selectedPaymentMethod === 'credit'}
+                                    {...register('paymentMethod')}
+                                    value="credit"
+                                >
+                                    <CreditCard size={16} />
+                                    <span>Cartão de Crédito</span>
+                                </Radio>
+                                <Radio
+                                    isSelected={selectedPaymentMethod === 'debit'}
+                                    {...register('paymentMethod')}
+                                    value="debit"                        
+                                >
+                                    <Bank size={16} />
+                                    <span>Cartão de Débito</span>
+                                </Radio>
+                                <Radio
+                                    isSelected={selectedPaymentMethod === 'cash'}
+                                    {...register('paymentMethod')}
+                                    value="cash"            
+                                >
+                                    <Money size={16} />
+                                    <span>Dinheiro</span>
+                                </Radio>
+                            </div>
                         </PaymentOptions>
                     </PaymentContainer>
                 </form>
@@ -225,6 +227,7 @@ export function Cart() {
                                 </div>
                                 <aside>R$ {coffee.price?.toFixed(2)}</aside>
                             </Coffee>
+                            <span />
                         </Fragment>
                     ))}
                     <TotalPurchased>

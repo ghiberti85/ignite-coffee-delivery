@@ -10,7 +10,7 @@ type QuantityInputProps = {
 export function QuantityInput({ 
     quantity, 
     addQuantity, 
-    removeQuantity 
+    removeQuantity,
 }: QuantityInputProps) {
     return(
         <QuantityInputContainer>

@@ -19,9 +19,10 @@ type CoffeeProps = {
 
 export function Card({ coffee }: CoffeeProps) {
     const theme = useTheme();
+    const { addItem } = useCart();
+
     const [ quantity, setQuantity ] = useState(0);
-    const [ isItemAdded, setIsItemAdded ] = useState(false)
-    const { addItem } = useCart()
+    const [ isItemAdded, setIsItemAdded ] = useState(false);
 
     function addQuantity() {
         setQuantity(state => state + 1)
@@ -36,7 +37,9 @@ export function Card({ coffee }: CoffeeProps) {
     function handleAddItem() {
         addItem({ id: coffee.id, quantity })
         setIsItemAdded(true)
-        setQuantity(1)
+        if (quantity === 0) {
+            setQuantity(1)
+        }
     }
 
     useEffect(() =>{
@@ -45,7 +48,7 @@ export function Card({ coffee }: CoffeeProps) {
         if (isItemAdded) {
             timeout = setTimeout(() => {
                 setIsItemAdded(false)
-            }, 10000)
+            }, 1000)
         }
 
         return () => {
@@ -77,7 +80,7 @@ export function Card({ coffee }: CoffeeProps) {
                     <span>{coffee.price.toFixed(2)}</span>
                 </Price>
 
-                <Order>
+                <Order $itemAdded={isItemAdded}>
                     <QuantityInput
                         quantity={quantity}
                         addQuantity={addQuantity}

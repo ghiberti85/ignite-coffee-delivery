@@ -20,7 +20,7 @@ export const InvoiceContainer = styled.div`
         ${mixins.fonts.titleXS};
     }
 
-    form {
+    > form {
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -71,7 +71,7 @@ export const AddressForm = styled.div`
         'street street street'
         'number fullAddress fullAddress'
         'neighborhood city state';
-    grid-template-columns: 200px 1gr 60px;
+    grid-template-columns: 200px 1fr 60px;
     grid-gap: 16px 12px;
 `
 
@@ -88,7 +88,7 @@ export const PaymentOptions = styled.div`
     flex-direction: column;
     gap: 8px;
 
-    div {
+    > div {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -100,24 +100,24 @@ export const Coffee = styled.div`
     display: flex;
     justify-content: space-between;
 
-    div {
-        img {
+    > div {
+        > img {
             width: 64px;
             height: 64px;
         }
 
         display: flex;
         align-items: stretch;
-        gap: 20px
+        gap: 20px;
 
-        div {
+        > div {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
     }
 
-    aside {
+    > aside {
         font-weight: bold;
     }
 `
@@ -126,7 +126,7 @@ export const CoffeeInfo = styled.div`
     display: flex;
     gap: 8px;
 
-    button {
+    > button {
         padding: 6px 8px;
         background-color: ${({ theme }) => theme.colors['base-button']};
         border-radius: 6px;
@@ -140,11 +140,11 @@ export const CoffeeInfo = styled.div`
             background-color: ${({ theme }) => theme.colors['base-hover']};
         }
 
-        svg {
+        > svg {
             color: ${({ theme }) => theme.colors.purple};
         }
 
-        span {
+        > span {
             color: ${({ theme }) => theme.colors['base-text']};
             ${mixins.fonts.buttonM};
             text-transform: uppercase;
@@ -153,18 +153,18 @@ export const CoffeeInfo = styled.div`
 `
 
 export const TotalPurchaseContainer = styled.div`
-  padding: 40px;
-  border-radius: 6px 36px;
-  background-color: ${({ theme }) => theme.colors['base-card']};
-  width: 100%;
-  min-width: 448px;
+    padding: 40px;
+    border-radius: 6px 36px;
+    background-color: ${({ theme }) => theme.colors['base-card']};
+    width: 100%;
+    min-width: 448px;
 
-  > span {
+    > span {
     display: block;
     height: 1px;
     background-color: ${({ theme }) => theme.colors['base-button']};
     margin: 24px 0;
-  }
+    }
 `
 
 export const TotalPurchased = styled.div`
@@ -184,6 +184,13 @@ export const TotalPurchased = styled.div`
         span:last-child {
             ${mixins.fonts.textM};
         }
+
+        div:last-child {
+            span {
+                ${mixins.fonts.textL};
+                font-weight: bold;
+            }
+        }
     }
 `
 
@@ -194,7 +201,8 @@ export const CheckoutButton = styled.button`
     text-transform: uppercase;
 
     ${mixins.fonts.buttonG};
-    color: ${({ theme }) => theme.colors['yellow']};
+    color: ${({ theme }) => theme.colors['white']};
+    background-color: ${({ theme }) => theme.colors['yellow']};
 
     transition: all 0.2s;
 
@@ -202,4 +210,10 @@ export const CheckoutButton = styled.button`
         background-color: ${({ theme }) => theme.colors['yellow-dark']};
     }
     border-radius: 6px;
+`
+
+export const PaymentErrorMessage = styled.p`
+    ${mixins.fonts.textXS};
+    font-weight: 400;
+    color: red;
 `
