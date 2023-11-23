@@ -19,8 +19,8 @@ type CoffeeProps = {
 
 export function Card({ coffee }: CoffeeProps) {
     const theme = useTheme();
-    const [ quantity, setQuantity] = useState(0);
-    const [ isItemAdded, setIsItemAdded] = useState(false)
+    const [ quantity, setQuantity ] = useState(0);
+    const [ isItemAdded, setIsItemAdded ] = useState(false)
     const { addItem } = useCart()
 
     function addQuantity() {

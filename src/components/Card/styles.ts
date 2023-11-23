@@ -75,7 +75,7 @@ export const Price = styled.div`
         font-weight: bold;
     }
 `
-export const Order = styled.div`
+export const Order = styled.div<{ $itemAdded?: boolean}>`
     display: flex;
     align-items: center;
     gap: 8px;
@@ -84,11 +84,13 @@ export const Order = styled.div`
         display: flex;
         padding: 8px;
         border-radius: 6px;
-        background-color: ${({ theme }) => theme.colors['purple-dark']};
+        background-color: ${({ theme, $itemAdded }) =>
+            $itemAdded ? theme.colors['yellow-dark'] : theme.colors['purple-dark']};
         transition: background-color 0.2s;
 
         &:hover {
-            background-color: ${({ theme }) => theme.colors['purple']};
+            background-color: ${({ theme, $itemAdded }) =>
+                $itemAdded ? theme.colors.yellow : theme.colors.purple};
         }
     }
 `

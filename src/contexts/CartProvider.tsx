@@ -21,7 +21,7 @@ interface CartContextProviderProps {
     children: ReactNode
 }
 
-export function CartContextProvider({ children }: CartContextProviderProps){
+export function CartContextProvider({ children }: CartContextProviderProps) {
     const [cartState, dispatch] = useReducer(
         cartReducer,
         {
