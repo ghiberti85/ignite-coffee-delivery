@@ -1,4 +1,4 @@
-import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
+import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
 import bannerImg from '../../assets/banner-img.svg'
 
@@ -69,8 +69,6 @@ export function Home() {
 
           <img src={bannerImg} alt="Café do Coffee Delivery" />
         </HeroContent>
-
-        <img src="/images/hero-bg.svg" id="hero-bg" alt="" />
       </Hero>
 
       <CoffeeList>

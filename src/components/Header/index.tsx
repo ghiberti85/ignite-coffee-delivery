@@ -1,4 +1,4 @@
-import { MapPin, ShoppingCart } from 'phosphor-react'
+import { MapPin, ShoppingCart } from '@phosphor-icons/react'
 import { Link } from 'react-router-dom'
 import logoSvg from '../../assets/logo-coffee-delivery.svg'
 
@@ -21,6 +21,7 @@ export function Header() {
 
         <Link to={`cart`} >
           <ShoppingCart size={22} weight="fill" />
+         
         </Link>
       </Aside>
     </Container>

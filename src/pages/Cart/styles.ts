@@ -27,6 +27,8 @@ export const InvoiceContainer = styled.div`
     }
 `
 
+export const CheckoutContainer = styled(InvoiceContainer)``
+
 export const FormsContainer = styled.div`
     padding: 40px;
     border-radius: 6px;
@@ -144,6 +146,21 @@ export const CoffeeInfo = styled.div`
             text-transform: uppercase;
         }
     }
+`
+
+export const TotalPurchaseContainer = styled.div`
+  padding: 40px;
+  border-radius: 6px 36px;
+  background-color: ${({ theme }) => theme.colors['base-card']};
+  width: 100%;
+  min-width: 448px;
+
+  > span {
+    display: block;
+    height: 1px;
+    background-color: ${({ theme }) => theme.colors['base-button']};
+    margin: 24px 0;
+  }
 `
 
 export const TotalPurchased = styled.div`
