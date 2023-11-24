@@ -16,7 +16,7 @@
 
 ## 💻 About
 
-The App was created to solve the challenge of Rocketseat's Ignite course (updated trail). This application, despite being simple, is an excellent example to practice the development of Shopping Cart management, which contains the following functionalites:
+The App was created to solve the challenge of Rocketseat's Ignite course (updated trail). This application, despite being simple, is an excellent example to practice the development of Shopping Cart manager.
 
 <p align="center">
   <img src="src/assets/screenshots/home-capture.gif">
