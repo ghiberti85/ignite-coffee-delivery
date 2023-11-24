@@ -18,7 +18,7 @@ export function Header() {
       <Aside>
         <div>
           <MapPin size={22} weight="fill" />
-          <span>Porto Alegre, RS</span>
+          <span>Curitiba, PR</span>
         </div>
 
         <Link to={`cart`} >

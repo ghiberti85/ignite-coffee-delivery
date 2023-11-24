@@ -19,11 +19,11 @@
 The App was created to solve the challenge of Rocketseat's Ignite course (updated trail). This application, despite being simple, is an excellent example to practice the development of Shopping Cart manager.
 
 <p align="center">
-  <img src="src/assets/screenshots/home-capture.gif">
+  <img src="src/assets/screenshots/home-capture-2023-11-23.gif">
 </p>
 
 <p align="center">
-  <img src="src/assets/screenshots/checkout-success-pages.gif">
+  <img src="src/assets/screenshots/checkout-success-capture-2023-11-23.gif">
 </p>
 
 
@@ -43,19 +43,19 @@ The App was created to solve the challenge of Rocketseat's Ignite course (update
 ### Home
 
 <p align="left"> 
-  <img src="src/assets/screenshots/screencapture-home.png" width="70%">
+  <img src="src/assets/screenshots/home-screencapture.png" width="70%">
 </p>
 
 ### Checkout
 
 <p align="left">       
-  <img src="src/assets/screenshots/screencapture-checkout.png" width="70%">
+  <img src="src/assets/screenshots/checkout-screencapture.png" width="70%">
 </p>
 
 ### Success
 
 <p align="left"> 
-  <img src="src/assets/screenshots/screencapture-success.png" width="70%">
+  <img src="src/assets/screenshots/success-screencapture.png" width="70%">
 </p>
 
 ## 🔨 Technologies
