@@ -43,19 +43,19 @@ The App was created to solve the challenge of Rocketseat's Ignite course (update
 ### Home
 
 <p align="left"> 
-  <img src="src/assets/screenshots/home-screencapture.png" width="70%">
+  <img src="src/assets/screenshots/home-screencapture-localhost.png" width="70%">
 </p>
 
 ### Checkout
 
 <p align="left">       
-  <img src="src/assets/screenshots/checkout-screencapture.png" width="70%">
+  <img src="src/assets/screenshots/checkout-screencapture-localhost-.png" width="70%">
 </p>
 
 ### Success
 
 <p align="left"> 
-  <img src="src/assets/screenshots/success-screencapture.png" width="70%">
+  <img src="src/assets/screenshots/success-screencapture-localhost.png" width="70%">
 </p>
 
 ## 🔨 Technologies
