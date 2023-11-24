@@ -38,6 +38,8 @@ The App was created to solve the challenge of Rocketseat's Ignite course (update
 
 ## 🎨 Layout
 
+> Check Figma [Figma](https://www.figma.com/file/nQKy2XxgjHR4g0JZGUHcCC/Coffee-Delivery-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=222%3A824&mode=design&t=ecVLUijfiUtqwWNs-1)
+
 ### Home
 
 <p align="left"> 
